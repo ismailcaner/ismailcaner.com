@@ -1,0 +1,209 @@
+.productsGrid, .productsGrid2 {
+  display: grid;
+  gap: 20px;
+  left: 50px;
+  right: 50px;
+}
+
+.homePage {
+  #home {
+    background: white;
+ }
+}
+.projectsPage {
+ #project {
+    background: white;
+ }
+}
+.photographsPage {
+  #photo {
+    background: white;
+ }
+}
+.bookmarksPage {
+  #bookmark {
+    background: white;
+ }
+}
+
+.banner{
+  background-size: cover;
+  background-position-y: center;
+  height: 150px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #6EC207;;
+  border-radius: 100%;
+  animation: dot 2s infinite;
+}
+
+@keyframes dot {
+  0% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(1.5);
+      opacity: 0.5;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+@media (min-width: 500px) { 
+  .productsGrid, .productsGrid2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 750px) { 
+  .productsGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+
+  @media (max-width: 500px) {
+    .link{
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .desktoplink{
+      display: none;
+    }
+
+    .testmain{
+      width: 100%;
+      gap: 20px;
+    }
+
+    .mobiletest{
+      padding: 10px;
+    }
+
+    .usercontenttest{
+      display: flex;
+    }
+
+    .main{
+      background: white;
+      padding: 0px;
+    }
+
+    .userphoto, .banner{
+      border: 3px solid #f1f1f1;
+      background: #f1f1f1;
+    }
+
+  }
+  
+
+  @media (min-width: 500px) { 
+    .link{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 3px;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      justify-content: space-between;
+    }
+
+    .link:hover {
+      background: white;
+    }
+
+    .desktoplink{
+      display: flex;
+    }
+
+    .mobilelink{
+      display: none;
+    }
+
+    .mobiletest{
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .usercontenttest{
+      display: none;
+    }
+
+    .mobilefooter{
+      display: none;
+    }
+
+    .main{
+      background: #f5f5f5;
+      padding: 20px;
+    }
+
+    .separator{
+      display: none;
+    }
+
+    .userphoto, .banner{
+      border: 3px solid  white;
+      background: white;
+    }
+  }
+
+  @media (max-width: 500px) { 
+    .productsGrid, .productsGrid2 {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 20px;
+      left: 20px;
+      right: 20px;
+    }
+
+    .testbanner{
+      width: 100%
+    }
+
+  }
+
+
+
+  @media (min-width: 1000px) { 
+
+    .testmain{
+      width: 60%;
+      gap: 0px;
+    }
+
+    .testbanner{
+      width: 60%;
+    }
+
+    .userphoto, .banner{
+      border: 3px solid  white;
+      background: white;
+    }
+
+    .productsGrid2 {
+      gap: 10px;
+      height: 85vh;
+      overflow-y: scroll;
+    }
+  }
+
+  
+
+
+
+
