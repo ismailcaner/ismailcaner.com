@@ -9,7 +9,7 @@ Over the years, my personal website has transformed significantly, evolving from
 
 To enrich the experience, I integrate multiple APIs:
 
-`Raindrop API` to dynamically display my curated bookmarks.
+`Raindrop API` to dynamically display my curated bookmarks. <br />
 `Unsplash API` to photos.
 `Airtable API` to updating my personal.
 Although this setup represents where I am now in my journey as a junior developer, I’m continuously improving and excited for what’s to come as I refine both the infrastructure and the user experience.
