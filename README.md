@@ -12,6 +12,7 @@ To enrich the experience, I integrate multiple APIs:
 `Raindrop API` to dynamically display my curated bookmarks. <br />
 `Unsplash API` to photos.<br />
 `Airtable API` to updating my personal.<br />
+
 Although this setup represents where I am now in my journey as a junior developer, I’m continuously improving and excited for what’s to come as I refine both the infrastructure and the user experience.
 
 ## Overview
