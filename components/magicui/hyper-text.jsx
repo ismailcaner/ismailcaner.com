@@ -10,7 +10,7 @@ const getRandomInt = (max) => Math.floor(Math.random() * max);
 
 export default function HyperText({
   text,
-  duration = 800,
+  duration = 1500,
 
   framerProps = {
     initial: { opacity: 0, y: -10 },

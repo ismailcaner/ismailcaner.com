@@ -23,6 +23,7 @@ export default function Home({bookmarks}) {
   const [category, setCategory] = useState('all');
   const categories = ["App", "Icon", "Portfolio", "Frontend", "Wallpaper"];
   const sortedCategories = categories.sort((a, b) => a.localeCompare(b));
+  
   const filteredRecords = !category || category === 'all' 
   ? bookmarks 
   : bookmarks.filter(bookmark => bookmark.tags.includes(category));
