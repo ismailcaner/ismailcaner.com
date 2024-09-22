@@ -18,7 +18,7 @@ Although this setup represents where I am now in my journey as a junior develope
 ## Overview
 
 - `/` — Home page with `Airtable APIs`.
-- `/project` - Side project with `Raindrop APIs`.
+- `/project` - Side project page with `Raindrop APIs`.
 - `/photos` - Photos page with `Unsplash APIs`.
 - `/bookmarks` — Bookmarks page with `Raindrop APIs`.
 - `/api` — API routes.
