@@ -26,7 +26,13 @@ const MyComponent = () => {
   };
 
   return (
-    <button onClick={handleThemeToggle}>{theme === "dark" ? <Sun className="hover:text-white text-[#808080] duration-200" size={20}/> : <Moon className="hover:text-black text-[#808080] duration-200" size={20} />}</button>
+    <button onClick={handleThemeToggle}>
+      {theme === "dark" ?
+        <Sun className="hover:text-white text-[#808080] duration-200" size={20}/>
+        :
+        <Moon className="hover:text-black text-[#808080] duration-200" size={20}/>
+      }
+    </button>
   );
 };
 

@@ -1,5 +1,4 @@
-import { ArrowUpRight} from 'lucide-react';
-import Customtext from "@/components/customs/Text/component";
+import { ArrowUpRight } from 'lucide-react';
 import {
     Table,
     TableBody,
@@ -9,7 +8,8 @@ import {
     TableHeader,
     TableRow,
   } from "@/components/ui/table";
-  import { getWorkspace, getMetaData  } from '@/src/lib/apis'
+import { getWorkspace, getMetaData } from '@/src/lib/apis';
+import Customtext from "@/components/customs/Text/component";
   
   export async function getStaticProps() {
     const pathname = '/workspace';
@@ -30,12 +30,6 @@ import {
 export default function Home({ Product }) {
   return (
     <div className="overflow-hidden">
-      <div className="flex flex-col gap-[10px] mb-5">
-        <span className="hidden lg:block">Workspace</span>
-        <span className="text-[gray] text-[15px] max-w-full">
-          Çalışma alanımda kullandığım araçların listesi.
-        </span>
-      </div>
 
       <div className="border rounded-md dark:border-[#3c3c3c]">
         <Table>
@@ -52,18 +46,16 @@ export default function Home({ Product }) {
               <TableHead className="min-w-[70px] px-4 text-[gray]">Link</TableHead>
             </TableRow>
           </TableHeader>
-          <TableBody className="md:dark:hover:text-[#4a4a4a] md:hover:text-[#d3d3d3]">
-         
-                  {Product.map((Product,  productsIndex)  => {
+          <TableBody className="lg:dark:hover:text-[#4a4a4a] lg:hover:text-[#d3d3d3]">
+            {Product.map((Product,  productsIndex)  => {
               const delay = 0.1 * (productsIndex + 1);
               return (
                 <TableRow
                   className="
                   sm:hover:bg-transparent sm:dark:hover:bg-transparent
-                  md:hover:bg-[#f5f5f5] md:dark:hover:bg-[#3c3c3c]
+                  lg:hover:bg-[#f5f5f5] lg:dark:hover:bg-[#3c3c3c]
                   dark:hover:text-white hover:text-black duration-300"
-                  key={productsIndex}
-                >
+                  key={productsIndex}>
                   <TableCell className="font-medium px-4 py-3 border-[#3c3c3c]">
                     <Customtext delay={delay} text={Product.fields.product}/>
                   </TableCell>

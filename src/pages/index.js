@@ -27,8 +27,8 @@ return (
 <div className='flex flex-col sm:gap-[50px] sm:gap-[25px] gap-[50px] sm:w-[60%] relative'>
 
     <div className='flex flex-col gap-[10px]'>  
-      <img alt='banner' className={`animation border-[3px] dark:border-[#282828] object-cover h-[150px] w-full rounded-[10px]`} src={banner}></img>
-      <img alt='İsmail Caner' className={`animation absolute left-[20px] top-[112.5px] rounded-full object-cover w-[75px] h-[75px] border-[3px] dark:border-[#282828]`}  src={me}/>
+      <img alt='banner' className={`animation border-[3px] dark:border-[#3c3c3c] object-cover h-[150px] w-full rounded-[10px]`} src={banner}></img>
+      <img alt='İsmail Caner' className={`animation absolute left-[20px] top-[112.5px] rounded-full object-cover w-[75px] h-[75px] border-[3px] dark:border-[#3c3c3c]`}  src={me}/>
       
     </div>
     {blogs.map((blog, index) => (
@@ -37,7 +37,7 @@ return (
       <div className='flex flex-col gap-[20px]'>
 
         <span className='hidden md:block'>{blog.fields.aboutTitle}</span>
-        <span className=' text-[gray] text-[15px]'>   {blog.fields.aboutContent}</span>
+        <span className=' text-[gray] text-[15px]'>{blog.fields.aboutContent}</span>
             
           <div className='flex justify-end'>
               <div className='flex flex-col text-[15px] text-[gray] ml-[10px] font-normal'>

@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Menu } from 'lucide-react';
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Drawer,
-         DrawerContent,
-         DrawerTitle,
-         DrawerTrigger } from "@/components/ui/drawer";
+  DrawerContent,
+  DrawerTitle,
+  DrawerTrigger } from "@/components/ui/drawer";
 import Sociallinks from '@/components/customs/Socials/component';
 import MobileProfile from '@/components/customs/MobileProfile/component';
-import PagesButton from '@/components/customs/Buttons/Pages-buttons'
+import PagesButton from '@/components/customs/Buttons/Pages-buttons';
 
 const MyComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +33,8 @@ const MyComponent = () => {
               onClick={handleClose}
               text={page.text}
               icon={page.icon}
-              href={page.href} />
+              href={page.href}
+            />
           ))}
         </div> 
         

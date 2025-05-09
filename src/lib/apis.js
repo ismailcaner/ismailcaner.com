@@ -1,5 +1,6 @@
 const unsplashtoken = process.env.NEXT_UNSPLASH_ACCESS_KEY;
-const unsplash = `https://api.unsplash.com/users/ismailcaner/photos/?client_id=${unsplashtoken}`;
+const perPage = 100;
+const unsplash = `https://api.unsplash.com/users/ismailcaner/photos/?client_id=${unsplashtoken}&per_page=${perPage}`;
 const unsplashStats = `https://api.unsplash.com/users/ismailcaner/statistics/?client_id=${unsplashtoken}`;
 
 const accessToken = process.env.NEXT_RAINDROP_ACCESS_TOKEN;
@@ -64,7 +65,15 @@ export async function getWorkspace() {
 export async function getPhotos() {
   const response = await fetch(unsplash);
   const data = await response.json();
-  return data;
+
+  const photosWithViews = await Promise.all(
+    data.map(async (photo) => {
+      const statsResponse = await fetch(`https://api.unsplash.com/photos/${photo.id}/statistics?client_id=${unsplashtoken}`);
+      const statsData = await statsResponse.json();
+      return { ...photo, views: statsData.views.total, downloads: statsData.downloads.total};
+    })
+  );
+    return photosWithViews;
 }
 
 export async function getPhotosStats() {

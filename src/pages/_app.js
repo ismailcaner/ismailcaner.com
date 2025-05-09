@@ -3,10 +3,10 @@ import Head from "next/head";
 import '@/globals.css';
 import { ThemeProvider } from "@/components/customs/Theme/theme-provider";
 
-function MyApp({ Component, pageProps }) {
-  const pageTitle = pageProps.title ? `${pageProps.title}` : "İsmail Caner";
-  const pageDescription = pageProps.desc || "";
-  const url = pageProps.url || 'ismailcaner.com';
+function MyApp({ Component, pageProps: metadata }) {
+  const pageTitle = metadata.title ? `${"İsmail Caner - " + metadata.title}` : "";
+  const pageDescription = metadata.desc || "";
+  const url = metadata.url || 'ismailcaner.com';
   const ogImage = `https://ismailcaner.com/api/og?title=${pageTitle}&description=${pageDescription}`;
 
   return (
@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
         disableTransitionOnChange
       >
         <Layout>
-          <Component {...pageProps} />
+          <Component {...metadata} />
         </Layout>
       </ThemeProvider>
     </>
