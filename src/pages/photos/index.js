@@ -51,18 +51,17 @@ export default function Photos({ photo, data }) {
         <Dialog>
           <DialogTrigger className='group sm:filter dark:sm:brightness-50 dark:hover:brightness-100 duration-300 flex items-end'>
           <span className=' hidden group-hover:flex absolute bottom-2 left-2 gap-2 bg-white/25 backdrop-blur-md px-1 rounded-sm'>
-            <div className='flex gap-0.5 text-[14px] items-center text-white font-[100]' >
+            <div className='flex gap-0.5 text-[14px] items-center text-white font-[100] lg:flex hidden' >
               <span><Eye size={16}/></span>
               <span>{photoItem.views}</span>
             </div>
-            <div className='flex gap-0.5 text-[14px] items-center text-white font-[100]' >
+            <div className='flex gap-0.5 text-[14px] items-center text-white font-[100] lg:flex hidden' >
               <span><ArrowDownToLine size={16} /></span>
-              <span>{photoItem.downloads}</span>
               <span>{photoItem.downloads}</span>
             </div>
         </span>
             <img className={`animation aspect-[1] object-cover rounded-lg`} src={photoItem.urls.raw} />
-              <a href={`${'https://unsplash.com/photos/'+photoItem.id}`} target="_blank" onClick={(a) => a.stopPropagation()}>
+              <a className='lg:flex hidden' href={`${'https://unsplash.com/photos/'+photoItem.id}`} target="_blank" onClick={(a) => a.stopPropagation()}>
                 <span className='absolute bottom-2 right-3 hidden group-hover:block rounded-sm px-[5px] py-[2px] bg-white/25 backdrop-blur-md'>
                   <ArrowDownToLine size={16} color='white' />
                 </span>
