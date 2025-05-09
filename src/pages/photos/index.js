@@ -58,6 +58,7 @@ export default function Photos({ photo, data }) {
             <div className='flex gap-0.5 text-[14px] items-center text-white font-[100]' >
               <span><ArrowDownToLine size={16} /></span>
               <span>{photoItem.downloads}</span>
+              <span>{photoItem.downloads}</span>
             </div>
         </span>
             <img className={`animation aspect-[1] object-cover rounded-lg`} src={photoItem.urls.raw} />
